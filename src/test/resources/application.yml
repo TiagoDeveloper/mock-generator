@@ -1,0 +1,17 @@
+debug: false
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+
+  liquibase:
+    enabled: true
+    change-log: "classpath:db/changelog-master.xml"

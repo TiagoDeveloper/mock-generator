@@ -1,0 +1,21 @@
+debug: false
+server:
+  port: 8080
+spring:
+  datasource:
+    #    driver-class-name: org.h2.Driver
+    #    password: password
+    #    url: jdbc:h2:mem:testdb
+    #    username: sa
+    driver-class-name: org.postgresql.Driver
+    password: postgres
+    url: jdbc:postgresql://192.168.0.102:5432/postgres
+    username: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+
+  liquibase:
+    enabled: true
+    change-log: "classpath:db/changelog-master.xml"

@@ -31,9 +31,9 @@ abstract class BaseIntegrationTest {
 
     companion object {
         val postgres =  FixedPostgreSQLContainer.getInstance().apply {
-            withDatabaseName("zupper_bff")
-            withUsername("zupper_bff")
-            withPassword("zupper_bff")
+            withDatabaseName("postgres")
+            withUsername("postgres")
+            withPassword("postgres")
             withExposedPorts(5432)
             withInitScript("data/init.sql")
             start()
